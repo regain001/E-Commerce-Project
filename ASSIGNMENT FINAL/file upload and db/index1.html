@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><script>
+function validate(){
+	flag=true;
+	alert(document.mfm.fileToUpload.value);
+	//alert(document.mfm.fileToUpload.value);
+	if(document.mfm.fileToUpload.value.length==0){
+		alert("you must choose file");
+		flag=false;
+	}
+	if(document.mfm.uName.value.length==0){
+		alert("you must type anything");
+		flag=false;
+	}
+	return flag;
+}
+</script>
+</head>
+<body>
+	<form action="upload1.php" method="post" enctype="multipart/form-data" name="mfm"><pre>
+		Your Name : 	<input type="text" name="uName">
+		Select file to upload : <input type="file" name="fileToUpload">
+		<input type="submit" value="Upload File" onclick="return validate();" name="submit"></pre>
+	</form>
+</body>
+</html>

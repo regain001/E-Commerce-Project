@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><script>
+function validate(){
+	flag=true;
+	alert(document.mfm.fileToUpload.value);
+	//alert(document.mfm.fileToUpload.value);
+	if(document.mfm.fileToUpload.value.length==0){
+		alert("you must choose file");
+		flag=false;
+	}
+	
+	return flag;
+}
+function change(){
+	flag=true;
+	alert(document.mfm.changeFile.value);
+	//alert(document.mfm.changeFile.value);
+	if(document.mfm.changeFile.value.length==0){
+		alert("you must choose file");
+		flag=false;
+	}
+	
+	return flag;
+}
+</script>
+</head>
+<body>
+	<form action="upload.php" method="post" enctype="multipart/form-data" name="mfm"><pre>
+			
+		upload your profile picture : <input type="file" name="fileToUpload">
+		<input type="submit" value="Upload File" onclick="return validate();" name="submit"></pre>
+	    <hr>
+		<pre>
+		change your profile picture : <input type="file" name="changeFile">
+		<input type="submit" value="change" onclick="return change();" name="submit">
+		</pre>
+		
+		
+	</form>
+	<form action="logout.html" method="post" style="float: center;"><pre>
+	<pre>
+		<input type="submit" value="logout"   name="submit">
+	</pre>
+	</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?php
+session_start();
+$_SESSION["userName"]="";
+setcookie("names", $cookie_value,time()-5000);
+?>
+<h3>Cookie is Destroyed!</h3>
+</head>
+
+</html>
